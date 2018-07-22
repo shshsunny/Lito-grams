@@ -1,4 +1,4 @@
-import random
+import random, pprint
 #This is a new configured IDE!
 def fac(num):
     if num == 1:
@@ -26,5 +26,10 @@ def turn(ev, defa = '', log = False):
 def until(string, log = True):
     g = turn('re != "' + string + '"', string, log)
     return str(g[0] * 100.0 / g[1]) +' %', str(100.0 / g[2]) + ' %'
-
-print (until("你好！"))
+a = input().split()
+if len(a) > 1:
+    li = []
+    for i in range(int(a[1])):
+        li.append(until(a[0]))
+    pprint.pprint(li)
+print (until(a[0]))
