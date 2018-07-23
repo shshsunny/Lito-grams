@@ -20,7 +20,7 @@ def turn(ev, defa = '', log = False):
         if log:
             print("(* . *) >> ", re)
     print("Bye!")
-    return 1, count, fac(len(defa))
+    return 1, count, fac(len(list(set(defa))))
 
 #turn('True')
 def until(string, log = True):
